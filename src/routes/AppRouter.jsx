@@ -13,7 +13,7 @@ const AppRouter = () => {
     <HashRouter>
       <Routes>
         <Route path='/' element={<PublicLayout />}>
-          <Route path="" element={<Navigate to="/login" />} />
+          <Route index element={<Navigate to="/login" />} />
           <Route path='login' element={<Login />} />
           <Route path='logout' element={<Logout/>} />
 
