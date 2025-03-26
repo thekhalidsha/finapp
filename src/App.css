@@ -1,0 +1,13 @@
+@keyframes fillBar {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.fill-animation {
+    animation: fillBar 2s ease-out forwards;
+}
