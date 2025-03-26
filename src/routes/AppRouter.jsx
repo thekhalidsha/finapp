@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigate, Route, Routes, HashRouter as BrowserRouter } from 'react-router-dom'
+import { Navigate, Route, Routes, HashRouter } from 'react-router-dom'
 import Login from '../pages/Login'
 import PublicLayout from './PublicLayout'
 import PrivateLayout from './PrivateLayout'
@@ -10,7 +10,7 @@ import Logout from '../pages/Logout'
 
 const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<PublicLayout />}>
           <Route path="" element={<Navigate to="/login" />} />
@@ -25,7 +25,7 @@ const AppRouter = () => {
           <Route path='delFinance/:id' element={<RemoveFinance />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
